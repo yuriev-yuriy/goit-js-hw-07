@@ -25,7 +25,7 @@ const createGallery = (obj) => {
   listItemRef.insertAdjacentHTML("beforeend", "<img>");
   const imgRef = document.querySelector("#gallery > li > img");
   imgRef.classList.add("img-flex");
-  console.log(imgRef);
+
   imgRef.src = obj.url;
   imgRef.alt = obj.alt;
   imgRef.width = "200";
