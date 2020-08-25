@@ -1,0 +1,20 @@
+body {
+  background-color: greenyellow;
+}
+
+.img-flex {
+  outline: red;
+  border: 1px, solid, red;
+  display: flex;
+}
+ul {
+  list-style: none;
+}
+
+#gallery {
+  display: flex;
+}
+
+#gallery li {
+  margin-right: 10px;
+}
