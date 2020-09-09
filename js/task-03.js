@@ -36,4 +36,3 @@ const createGallery = (obj) => {
 images.reverse().forEach((image) => {
   createGallery(image);
 });
-console.log(images);
