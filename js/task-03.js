@@ -21,18 +21,16 @@ const images = [
 const list = document.querySelector("#gallery");
 const createGallery = (obj) => {
   list.insertAdjacentHTML("afterbegin", "<li></li>");
-  const listItemRef = document.querySelector("#gallery > li");
-  // listItemRef.insertAdjacentHTML("beforeend", "<img>");
-  // const imgRef = document.querySelector("#gallery > li > img");
+
   const imgRef = document.createElement("img");
   imgRef.classList.add("img-flex");
 
   imgRef.src = obj.url;
   imgRef.alt = obj.alt;
   imgRef.width = "200";
-  listItemRef.appendChild(imgRef);
+
   return listItemRef;
 };
-images.reverse().forEach((image) => {
-  createGallery(image);
-});
+const imageList = images.reverse().map((image) => createGallery(image));
+const listItemRef = document.querySelector("#gallery > li");
+listItemRef.append(...imageList);
