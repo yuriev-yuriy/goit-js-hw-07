@@ -8,17 +8,17 @@ const ingredients = [
   "Зелень",
   "Приправы",
 ];
+
 const list = document.querySelector("#ingredients");
 
-ingredients.forEach((ingredient) => {
-  const newItem = createListItem(ingredient);
-  console.log(newItem);
-  list.appendChild(newItem);
-});
-
-function createListItem(text) {
+function createListItem(ingredient) {
   const li = document.createElement("li");
-
-  li.textContent = text;
-  return li;
+  li.textContent = ingredient;
+  list.append(li);
+  return list;
 }
+
+const addEl = ingredients.map((ingredient) => {
+  createListItem(ingredient);
+});
+list.appendChild(...addEl);
