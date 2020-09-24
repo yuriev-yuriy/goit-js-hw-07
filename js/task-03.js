@@ -33,4 +33,4 @@ const createGallery = (obj) => {
 };
 const imageList = images.reverse().map((image) => createGallery(image));
 
-listItemRef.append(...imageList);
+list.append(...imageList);

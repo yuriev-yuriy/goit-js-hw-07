@@ -14,11 +14,10 @@ const list = document.querySelector("#ingredients");
 function createListItem(ingredient) {
   const li = document.createElement("li");
   li.textContent = ingredient;
-  list.append(li);
-  return list;
+
+  return li;
 }
 
-const addEl = ingredients.map((ingredient) => {
-  createListItem(ingredient);
-});
-list.appendChild(...addEl);
+const addEl = ingredients.map((ingredient) => createListItem(ingredient));
+
+list.append(...addEl);
